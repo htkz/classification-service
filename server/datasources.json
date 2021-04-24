@@ -1,0 +1,12 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongodb": {
+    "url": "mongodb+srv://admin:forinterview@cluster0.xkctf.mongodb.net/test",
+    "name": "mongodb",
+    "useNewUrlParser": true,
+    "connector": "mongodb"
+  }
+}
