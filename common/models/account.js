@@ -48,6 +48,7 @@ module.exports = function (Account) {
     if (!checkAccount(account)) {
       return next(makeError(401, "Invalid data format!"));
     }
+    account.email = account.email.toLowerCase();
     Account.findOne(
       {
         where: {
@@ -56,7 +57,7 @@ module.exports = function (Account) {
               username: account.username,
             },
             {
-              email: account.email,
+              email: account.email.toLowerCase(),
             },
           ],
         },
